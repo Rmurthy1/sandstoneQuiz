@@ -12,6 +12,8 @@
 		B71E35591E8327EC004A486E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B71E35571E8327EC004A486E /* Main.storyboard */; };
 		B71E355B1E8327EC004A486E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B71E355A1E8327EC004A486E /* Assets.xcassets */; };
 		B71E355E1E8327EC004A486E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B71E355C1E8327EC004A486E /* LaunchScreen.storyboard */; };
+		B71E35661E832D0F004A486E /* CaptureImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71E35651E832D0F004A486E /* CaptureImageViewController.swift */; };
+		B7E0017E1E84725E0067E8FA /* ProcessImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0017D1E84725E0067E8FA /* ProcessImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		B71E355A1E8327EC004A486E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B71E355D1E8327EC004A486E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B71E355F1E8327EC004A486E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B71E35651E832D0F004A486E /* CaptureImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureImageViewController.swift; sourceTree = "<group>"; };
+		B7E0017D1E84725E0067E8FA /* ProcessImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				B71E35531E8327EC004A486E /* AppDelegate.swift */,
 				B71E35551E8327EC004A486E /* ViewController.swift */,
 				B71E35571E8327EC004A486E /* Main.storyboard */,
+				B71E35651E832D0F004A486E /* CaptureImageViewController.swift */,
+				B7E0017D1E84725E0067E8FA /* ProcessImageViewController.swift */,
 				B71E355A1E8327EC004A486E /* Assets.xcassets */,
 				B71E355C1E8327EC004A486E /* LaunchScreen.storyboard */,
 				B71E355F1E8327EC004A486E /* Info.plist */,
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7E0017E1E84725E0067E8FA /* ProcessImageViewController.swift in Sources */,
+				B71E35661E832D0F004A486E /* CaptureImageViewController.swift in Sources */,
 				B71E35561E8327EC004A486E /* ViewController.swift in Sources */,
 				B71E35541E8327EC004A486E /* AppDelegate.swift in Sources */,
 			);
@@ -302,6 +310,7 @@
 				B71E35641E8327EC004A486E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

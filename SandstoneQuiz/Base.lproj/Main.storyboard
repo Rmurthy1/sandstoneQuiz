@@ -1,26 +1,117 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZaE-0O-hOa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Collection View Controller-->
+        <scene sceneID="5jI-1A-AnR">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <collectionViewController id="8qy-ty-x0Z" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="LPk-jC-Wc6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cKB-3M-Wnw">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Xiv-Je-0ND">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="8qy-ty-x0Z" id="0LA-hG-sHI"/>
+                            <outlet property="delegate" destination="8qy-ty-x0Z" id="xVE-9e-ICO"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgI-2t-9xb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2356" y="260"/>
+        </scene>
+        <!--Take it-->
+        <scene sceneID="lxn-nl-2dl">
+            <objects>
+                <viewController id="ZaE-0O-hOa" customClass="CaptureImageViewController" customModule="SandstoneQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CtF-8y-6b2"/>
+                        <viewControllerLayoutGuide type="bottom" id="fjL-mM-QYC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kaf-GB-L0N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Skc-gu-MAl">
+                                <rect key="frame" x="26" y="30" width="323" height="543"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KgZ-3i-eIN">
+                                <rect key="frame" x="26" y="627" width="323" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exz-qt-K36">
+                                        <rect key="frame" x="0.0" y="0.0" width="81" height="30"/>
+                                        <state key="normal" title="Take Photo"/>
+                                        <connections>
+                                            <action selector="takePhotoWithSender:" destination="ZaE-0O-hOa" eventType="touchUpInside" id="Lrt-yY-DEc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92i-zP-hXt">
+                                        <rect key="frame" x="81" y="0.0" width="80.5" height="30"/>
+                                        <state key="normal" title="Library"/>
+                                        <connections>
+                                            <action selector="loadPhotoWithSender:" destination="ZaE-0O-hOa" eventType="touchUpInside" id="Vl9-e5-ev5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXs-iC-1AD">
+                                        <rect key="frame" x="161.5" y="0.0" width="81" height="30"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="save:" destination="ZaE-0O-hOa" eventType="touchUpInside" id="mca-cv-rvB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqH-Yd-SCL">
+                                        <rect key="frame" x="242.5" y="0.0" width="80.5" height="30"/>
+                                        <state key="normal" title="Calculate"/>
+                                        <connections>
+                                            <action selector="calculate:" destination="ZaE-0O-hOa" eventType="touchUpInside" id="Q0q-KN-6Ns"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KgZ-3i-eIN" firstAttribute="leading" secondItem="kaf-GB-L0N" secondAttribute="leadingMargin" constant="10" id="C6g-8l-kd3"/>
+                            <constraint firstItem="fjL-mM-QYC" firstAttribute="top" secondItem="KgZ-3i-eIN" secondAttribute="bottom" constant="10" id="GZb-ja-Cpj"/>
+                            <constraint firstItem="Skc-gu-MAl" firstAttribute="leading" secondItem="kaf-GB-L0N" secondAttribute="leadingMargin" constant="10" id="ROx-Fx-bf6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Skc-gu-MAl" secondAttribute="trailing" constant="10" id="Y6p-j3-xU9"/>
+                            <constraint firstItem="Skc-gu-MAl" firstAttribute="top" secondItem="CtF-8y-6b2" secondAttribute="bottom" constant="10" id="ZON-Do-3C9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KgZ-3i-eIN" secondAttribute="trailing" constant="10" id="gAV-sb-Ust"/>
+                            <constraint firstItem="KgZ-3i-eIN" firstAttribute="top" secondItem="Skc-gu-MAl" secondAttribute="bottom" constant="54" id="imG-IZ-wH6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Take it" id="EcS-EV-gQ5"/>
+                    <connections>
+                        <outlet property="ImageView" destination="Skc-gu-MAl" id="mlg-dR-f7F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EpE-Bi-gw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="592.79999999999995" y="-393.55322338830587"/>
         </scene>
     </scenes>
 </document>

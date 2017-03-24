@@ -18,7 +18,7 @@ class ProcessImageViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     
     /**
-        slider
+        slider updates
     */
     @IBAction func sliderValueUpdate(_ sender: UISlider) {
         
@@ -38,6 +38,7 @@ class ProcessImageViewController: UIViewController {
         // Flip the slider vertically
         self.slider.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
         
+        // a clear image for the top of the bar, to hide it
         let clearImage = UIImage(named: "clearImage")
         slider.setMaximumTrackImage(clearImage, for: .normal)
        

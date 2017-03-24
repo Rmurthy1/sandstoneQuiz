@@ -117,9 +117,7 @@ class CaptureImageViewController: UIViewController, UIImagePickerControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-//        // notifications to hide the overlay when taking photos (it was bothering me)
-//        let nc = NotificationCenter.default
-//        nc.addObserver(forName: NSNotification.Name(rawValue: "_UIImagePickerControllerUserDidCaptureItem"), object: <#T##Any?#>, queue: <#T##OperationQueue?#>, using: <#T##(Notification) -> Void#>)
+
     }
     
     

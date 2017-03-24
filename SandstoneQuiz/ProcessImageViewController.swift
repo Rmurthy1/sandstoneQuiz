@@ -16,6 +16,10 @@ class ProcessImageViewController: UIViewController {
     var image:UIImage?
     
     @IBOutlet weak var label: UILabel!
+    
+    /**
+        slider
+    */
     @IBAction func sliderValueUpdate(_ sender: UISlider) {
         
         
@@ -33,6 +37,9 @@ class ProcessImageViewController: UIViewController {
       
         // Flip the slider vertically
         self.slider.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
+        
+        let clearImage = UIImage(named: "clearImage")
+        slider.setMaximumTrackImage(clearImage, for: .normal)
        
         // Do any additional setup after loading the view.
     }

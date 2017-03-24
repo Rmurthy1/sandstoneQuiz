@@ -8,8 +8,15 @@
 
 import UIKit
 
-class CustomOverlayView: UIView {
+protocol CustomOverlayDelegate{
+    //func didCancel(overlayView:CustomOverlayView)
+    func didShoot(overlayView:CustomOverlayView)
+}
 
+class CustomOverlayView: UIView {
+   
+    
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

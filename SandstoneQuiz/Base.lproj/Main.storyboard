@@ -40,21 +40,21 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92i-zP-hXt">
-                                        <rect key="frame" x="81" y="0.0" width="81" height="30"/>
+                                        <rect key="frame" x="81" y="0.0" width="80.5" height="30"/>
                                         <state key="normal" title="Library"/>
                                         <connections>
                                             <action selector="loadPhotoWithSender:" destination="ZaE-0O-hOa" eventType="touchUpInside" id="Vl9-e5-ev5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXs-iC-1AD">
-                                        <rect key="frame" x="162" y="0.0" width="80" height="30"/>
+                                        <rect key="frame" x="161.5" y="0.0" width="81" height="30"/>
                                         <state key="normal" title="Save"/>
                                         <connections>
                                             <action selector="save:" destination="ZaE-0O-hOa" eventType="touchUpInside" id="mca-cv-rvB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqH-Yd-SCL">
-                                        <rect key="frame" x="242" y="0.0" width="81" height="30"/>
+                                        <rect key="frame" x="242.5" y="0.0" width="80.5" height="30"/>
                                         <state key="normal" title="Calculate"/>
                                         <connections>
                                             <action selector="calculate:" destination="ZaE-0O-hOa" eventType="touchUpInside" id="Q0q-KN-6Ns"/>
@@ -103,13 +103,13 @@
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="1b2-hJ-fbj">
                                 <rect key="frame" x="28" y="318.5" width="505" height="31"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="minimumTrackTintColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="maximumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="sliderValueUpdate:" destination="gR7-Gi-I7b" eventType="valueChanged" id="qS6-Ln-vnv"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rx-Z6-QaD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rx-Z6-QaD">
                                 <rect key="frame" x="26" y="626" width="323" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>

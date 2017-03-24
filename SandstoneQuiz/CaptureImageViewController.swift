@@ -10,23 +10,31 @@ import UIKit
 
 class CaptureImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    // Our image, confirmed below
     @IBOutlet weak var ImageView: UIImageView!
-
-    // greyed out until user selects photo
     
-    @IBOutlet weak var calculate: UIButton!
     
     var imagePicker = UIImagePickerController()
     
     @IBOutlet weak var save: UIButton!
    
     @IBAction func calculate(_ sender: Any) {
+        if ImageView.image == nil{
+            let ac = UIAlertController(title: "No Photo!", message: "I need that photo!", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+            
+        }
+        else{
+            performSegue(withIdentifier: "ProcessImageSegue", sender: nil)
+       }
         
     }
     
+    // save the image for later
     @IBAction func save(_ sender: Any) {
         if ImageView.image == nil{
-            let ac = UIAlertController(title: "No Photo!", message: "I need that photo!", preferredStyle: .alert)
+            let ac = UIAlertController(title: "No Photo!", message: "I need that photo to save it!", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default))
             present(ac, animated: true)
 
@@ -35,6 +43,7 @@ class CaptureImageViewController: UIViewController, UIImagePickerControllerDeleg
             UIImageWriteToSavedPhotosAlbum(ImageView.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
         }
     }
+    
     func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
             // we got back an error!
@@ -49,11 +58,24 @@ class CaptureImageViewController: UIViewController, UIImagePickerControllerDeleg
     }
     
     @IBAction func takePhoto(sender: UIButton) {
+        
+        //customView stuff
+        let customViewController = CustomOverlayViewController(
+            nibName:"CustomOverlayViewController",
+            bundle: nil
+        )
+        let customView:CustomOverlayView = customViewController.view as! CustomOverlayView
+        
         imagePicker =  UIImagePickerController()
+        
+        customView.frame = self.imagePicker.view.frame
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
+        //imagePicker.cameraOverlayView
         
-        present(imagePicker, animated: true, completion: nil)
+        present(imagePicker, animated: true, completion: {
+            self.imagePicker.cameraOverlayView = customView
+        })
       
 
     }
@@ -76,6 +98,8 @@ class CaptureImageViewController: UIViewController, UIImagePickerControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
+       
+        
         
        
         // Do any additional setup after loading the view.
@@ -93,7 +117,14 @@ class CaptureImageViewController: UIViewController, UIImagePickerControllerDeleg
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
-        let vc = segue.destination as! 
+        if segue.identifier == "ProcessImageSegue"{
+            if let vc = segue.destination as? ProcessImageViewController{
+                vc.image = self.ImageView.image
+            }
+        }
+        
+        
+        
         // Pass the selected object to the new view controller.
     }
     

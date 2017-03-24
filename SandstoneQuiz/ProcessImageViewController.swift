@@ -10,9 +10,30 @@ import UIKit
 
 class ProcessImageViewController: UIViewController {
 
+    @IBOutlet weak var ImageView: UIImageView!
+    
+    @IBOutlet weak var slider: UISlider!
+    var image:UIImage?
+    
+    @IBOutlet weak var label: UILabel!
+    @IBAction func sliderValueUpdate(_ sender: UISlider) {
+        
+        
+        // calculate the number of pixels from the height of the slider
+        // (% of slider * height of slider * scale value)
+        let displayVal = (sender.value/100.0) * Float(sender.frame.height * UIScreen.main.scale)
+        label.text = "\(displayVal) Pixels"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // set the image
+        ImageView.image = image
+      
+      
+        // Flip the slider vertically
+        self.slider.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
+       
         // Do any additional setup after loading the view.
     }
 

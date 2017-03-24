@@ -21,8 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IL1-cm-Kkf">
-                    <rect key="frame" x="67" y="40" width="240" height="128"/>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IL1-cm-Kkf">
+                    <rect key="frame" x="67" y="39" width="240" height="128"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="IL1-cm-Kkf" secondAttribute="height" multiplier="15:8" id="CKw-i1-qYN"/>
                         <constraint firstAttribute="width" constant="240" id="rdW-gi-xWd"/>

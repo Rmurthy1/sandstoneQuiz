@@ -101,8 +101,8 @@
                                     <constraint firstAttribute="width" secondItem="z9k-dr-0eG" secondAttribute="height" multiplier="323:522" constant="12.994252873563198" id="v5i-AG-lJR"/>
                                 </constraints>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="1b2-hJ-fbj">
-                                <rect key="frame" x="28" y="318.5" width="505" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="1b2-hJ-fbj">
+                                <rect key="frame" x="28" y="309.5" width="505" height="31"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="minimumTrackTintColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
